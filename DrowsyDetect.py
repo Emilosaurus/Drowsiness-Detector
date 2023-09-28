@@ -89,8 +89,9 @@ while True:
 
 			# CALLING THE AUDIO FUNCTION OF TEXT TO
 			# AUDIO FOR ALERTING THE PERSON
-			engine.say("Alert!!!! WAKE UP")
+			engine.say("Alert!!!! YOU ARE DROWSY WAKE UP PLEASE")
 			engine.runAndWait()
+
 
 	cv2.imshow("Drowsiness DETECTOR IN OPENCV2", frame)
 	key = cv2.waitKey(9)
