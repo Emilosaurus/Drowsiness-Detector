@@ -84,15 +84,18 @@ while True:
 		if Eye_Rat < 0.25:
 			cv2.putText(frame, "DROWSINESS DETECTED", (50, 100),
 						cv2.FONT_HERSHEY_PLAIN, 2, (21, 56, 210), 3)
-			cv2.putText(frame, "Alert!!!! WAKE UP DUDE", (50, 450),
+			cv2.putText(frame, "Alert!!!! WAKE UP ", (50, 450),
 						cv2.FONT_HERSHEY_PLAIN, 2, (21, 56, 212), 3)
 
 			# CALLING THE AUDIO FUNCTION OF TEXT TO
 			# AUDIO FOR ALERTING THE PERSON
 			engine.say("Alert!!!! YOU ARE DROWSY WAKE UP PLEASE")
 			engine.runAndWait()
-
-
+   
+   
+    # Display the message "Press Backspace to exit"
+	cv2.putText(frame, "Press Backspace to exit", (50, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 100, 255), 2)
+   
 	cv2.imshow("Drowsiness DETECTOR IN OPENCV2", frame)
 	key = cv2.waitKey(9)
 	if key == 8:  # ASCII value for Backspace
